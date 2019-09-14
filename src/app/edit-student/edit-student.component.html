@@ -1,0 +1,63 @@
+
+<div class="content-container">
+
+    <div class="go-back-btn" (click)="goMain()"> <!--*ngIf="indiStudentDetails && IndividualCourseData"-->
+      <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-back-png.png" alt="goback">
+    <span>Go back</span>
+    </div>
+
+<fieldset>
+  <legend><h2>Update Student Data</h2></legend>
+  <form [formGroup]="editStudentForm" (ngSubmit)="UpdateStudent()">
+      <input type="hidden" formControlName="id">
+    
+      <div class="row">
+        <div class="col-25">
+          <label>Enter Student Name</label>
+        </div>
+        <div class="col-75">
+            <input type="text" formControlName="studentName" placeholder="student Name"/>
+        </div>
+    
+        <div class="col-25">
+            <label>Enter Student Address</label>
+          </div>
+          <div class="col-75">
+              <input type="text" formControlName="address" placeholder="Address"/> 
+          </div>
+    
+        <div class="col-25">
+            <label>Enter Student Mobile</label>
+          </div>
+          <div class="col-75">
+              <input type="text" formControlName="mobile" placeholder="Mobile "/> 
+          </div>
+    
+          <div class="col-25">
+              <label>Enter Student email</label>
+            </div>
+            <div class="col-75">
+                <input type="text" formControlName="email" placeholder="email id"/>
+            </div>
+    
+          <div class="col-25">
+              <label>Enter Student Course</label>
+            </div>
+            <div class="col-75">
+                <input type="text" formControlName="courseId" placeholder="course id"/>
+            </div>
+    
+            <div class="col-25">
+             &nbsp;
+            </div>
+            <div class="col-75">
+                <button type="submit" [disabled]="!editStudentForm.valid">Submit</button>
+            </div>
+      </div>
+      
+      </form>
+</fieldset>
+  
+</div>
+
+

@@ -1,0 +1,51 @@
+{
+    "student": [
+        {
+            "id": 1,
+            "student_name": "orange2",
+            "address": "wellampitiya",
+            "mobile": "7896541",
+            "email": "orange@gmail.com",
+            "courseId": 1
+        },
+        {
+            "id": 27,
+            "student_name": "Sumudu jayasinga",
+            "address": "nugegoda",
+            "mobile": "7896541",
+            "email": "sumudu@gmail.com",
+            "courseId": "2"
+        },
+        {
+            "id": 88,
+            "student_name": "JohnPapa",
+            "address": "kandy",
+            "mobile": "78965412",
+            "email": "johnpapa@gmail.com",
+            "courseId": "2"
+        }
+    ],
+    "course": [
+        {
+            "id": 1,
+            "courseName": "Diploma in computing",
+            "Duration": "6 Month",
+            "Fees": "52000",
+            "Modules": 10
+        },
+        {
+            "id": 2,
+            "courseName": "Diploma in Marketing",
+            "Duration": "6 Month",
+            "Fees": "25000",
+            "Modules": 12
+        },
+        {
+            "id": 3,
+            "courseName": "Diploma in development",
+            "Duration": "4 Month",
+            "Fees": "8000",
+            "Modules": 4
+        }
+    ]
+}

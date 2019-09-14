@@ -1,0 +1,126 @@
+<div class="go-back-btn" (click)="goMain()"
+*ngIf="indiStudentDetails"> <!--*ngIf="indiStudentDetails && IndividualCourseData"-->
+  <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-back-png.png" alt="goback">
+<span>Go back</span>
+</div>
+<div *ngIf="indiStudentDetails">
+
+  <div class="main-container"  *ngFor="let individual of indiStudentDetails">
+    
+    <div class="student-heading">
+        <h1>This is All Details relavant to - {{individual.student_name}} </h1>
+        <div class="horizontal-line"></div>
+    </div>
+
+    <div class="col-25">
+      <label>Student ID</label>
+    </div>
+    <div class="col-75">
+        {{individual.id}}
+    </div>
+
+    <div class="col-25">
+        <label>Student Name</label>
+      </div>
+      <div class="col-75">
+          {{individual.student_name}}
+      </div>
+
+    <div class="col-25">
+        <label>Student Address</label>
+      </div>
+      <div class="col-75">
+          {{individual.address}}
+      </div>
+
+      <div class="col-25">
+        <label>Student Mobile</label>
+      </div>
+      <div class="col-75">
+        {{individual.mobile}}
+      </div>
+
+      <div class="col-25">
+        <label>Student Email</label>
+      </div>
+      <div class="col-75">
+          {{individual.email}}
+      </div>
+
+      <img class="image" 
+      src="http://wsoarchive.com/wp-content/uploads/2013/10/Male_Vector_Character_with_Jeans_and_Blue_Shirt1.png"
+      alt="school-boy">
+
+  </div>
+</div>
+
+
+<div class="create-new-student" *ngIf="!ids">
+    <div class="content-container">
+      <fieldset>
+          <legend><h2>Create New Student</h2></legend>
+          <form [formGroup]="addStudentFormBuild" (ngSubmit)="onSubmit()" >
+          <div class="row">
+            <div>
+                <div class="col-25">
+                    <label>Enter Student Name</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" formControlName="studentName" placeholder="student Name"/>
+                  </div>
+            </div>
+            
+            <div>
+                <div class="col-25">
+                    <label>Enter Student Address</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" formControlName="address" placeholder="Address"/>
+                  </div>
+            </div>
+           
+            <div>
+                <div class="col-25">
+                    <label>Enter Student Mobile</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" formControlName="mobile" placeholder="Mobile "/> 
+                  </div>
+            </div>
+            
+            <div>
+                <div class="col-25">
+                    <label>Enter Student email</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" formControlName="email" placeholder="email id"/>
+                  </div>
+            </div>
+           
+            <div>
+                <div class="col-25">
+                    <label>Enter Student course Id</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" formControlName="courseId" placeholder="course id"/>
+                  </div>
+            </div>
+            <div>
+                <div class="col-25">
+                    &nbsp;
+                  </div>
+                  <div class="col-75">
+                      <button type="submit" [disabled]="!addStudentFormBuild.valid">Submit</button>
+                  </div>
+            </div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+
+   <div class="output-result-json">
+      Value: {{ addStudentFormBuild.value | json }}
+   </div>
+    
+
+</div>

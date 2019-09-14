@@ -1,0 +1,72 @@
+<div class="angular-heading">
+    <h1>Angular work with Node mock API</h1>
+    <div class="horizontal-line"></div>
+</div>
+
+<strong>Student Details</strong>
+
+<button class="btn-buttons-create" (click)="createNewStudent()">Create New Student</button>
+
+<table style="width:100%; margin-bottom:30px; text-align: center;">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Student Name</th>
+      <th>address </th>
+      <th>Mobile</th>
+      <th>email</th>
+      <th>course</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let studentData of stdServiceData" >
+          <td>{{studentData.id}}</td>
+          <td>{{studentData.student_name}}</td>
+          <td>{{studentData.address}}</td>
+          <td>{{studentData.mobile}}</td>
+          <td>{{studentData.email}}</td>
+          <td>{{studentData.courseId}}</td>
+      <td>
+          <div class="option-section">  
+              <div (click)="viewEachStudentData(studentData.id, studentData.courseId)" class="btn-buttons view" >
+                view 
+              </div>
+      
+              <div (click)="editStudents(studentData.id)" class="btn-buttons edit" >
+                Edit 
+              </div>
+        
+              <div (click)="deleteStudent(studentData.id)" class="btn-buttons delete" >
+                Delete
+              </div>
+            </div>
+      </td>
+     
+    </tr>
+  </tbody>
+</table>
+
+
+<strong>Course Details</strong>
+<table style="width:100%; margin-bottom:30px; text-align: center;">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>course</th>
+        <th>duration </th>
+        <th>fees</th>
+        <th>module</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courseData">
+        <td >{{course.id}}</td>
+        <td>{{course.courseName}}</td>
+        <td>{{course.Duration}}</td>
+        <td>{{course.Fees}}</td>
+        <td>{{course.Modules}}</td>
+      </tr>
+
+    </tbody>
+  </table>

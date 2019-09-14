@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+.go-back-btn {
+    width: 100px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 75px;
+    cursor: pointer;
+    &.go-back-btn > img{
+        width: 28px;
+        padding: 1px;
+    }
+    & span{
+        position: absolute;
+        top: 8px;
+    }
+}
+
+.main-container{
+    width: 100%;
+    background-color: #393b6d;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    .col-25{
+        width: 25%;
+        padding: 5px;
+        color: white;
+        float: left;
+    }
+    .col-75{
+        width: 75%;
+        padding: 5px;
+        color: white;
+      
+    }
+    input[type=text]{
+        padding: 4px 4px;
+    }
+    .image{
+        float: right;
+        margin-top: -29%;
+        position: relative;
+    }
+}
+.main-container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.student-heading{
+    transition: color 0.4s ease-in-out;
+    margin-bottom: 30px;
+    h1{
+        text-align: left;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+    .horizontal-line{
+        border-bottom: 15px;
+        background-color: blueviolet;
+        height: 2px;
+        width: 25%;
+        margin-left: 0;
+    }
+    
+}div.student-heading:hover{
+    color: rgb(91, 20, 158);
+}
+
+.content-container{
+    padding: 52px 44px;
+    margin-top: -10%;
+
+    .row{
+        .col-25{
+            width: 25%;
+            float: left;
+            margin:0;
+            padding: 5px;
+        }
+        .col-75{
+            width: 75%;
+            margin: 0;
+            padding: 5px;
+        }
+        input[type=text]{
+            padding: 5px 12px;
+            width: 60%;
+        }
+        button[type=submit]{
+            width: 150px;
+            height: 35px;
+            border-radius: 26px;
+            background-color: #999be2;
+            color: #ffffff;
+        }
+    }
+    .row:after{
+        clear:both;
+        content: "";
+        display: table;
+    }
+}
+
+.output-result-json{
+    width: 80%;
+    background-color: #7f82d1;
+    padding: 30px;
+    margin: auto;
+    border: 1px solid grey;
+
+    &.output-result-json:after{
+        content: " ~~~~~ This is JSON output of Form";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-container, .row{
+        .col-25, .col-75 {
+            width: 100% !important;
+            margin-top: 0;
+        }
+    }
+}

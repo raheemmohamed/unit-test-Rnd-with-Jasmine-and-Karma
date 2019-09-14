@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+div.angular-heading{
+    transition: color 0.4s ease-in-out;
+    h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .horizontal-line{
+        border-bottom: 5px;
+        background-color: blueviolet;
+        height: 2px;
+        width: 25%;
+        margin: auto;
+    }
+}div.angular-heading:hover{
+    color: rgb(91, 20, 158);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    color:black;
+    th,td{
+        border:1px solid #b7acac;
+        width: 50px;
+        padding: 10px;
+    }& th{
+        text-transform: capitalize;
+        background-color: black;
+        color:#ffffff;
+    }
+    tr{
+        background-color: #ffffff;
+    }& tr:hover{
+        background-color: rgb(247, 247, 247);
+    }
+    .option-section{
+        display: flex; 
+        flex-direction: row; 
+        z-index: -1;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.btn-buttons{
+    width: 150px; 
+    border:1px solid black; cursor: pointer;
+    z-index: 999999; margin-right: 15px;
+    padding: 10px;
+    margin: 4px 2px;
+    transition: 0.2s ease-in-out;
+
+    &.edit{
+        background-color: burlywood;
+    }&.edit:hover{
+        background-color: rgb(90, 72, 49);
+        color:#ffffff;
+    }
+
+    &.delete{
+        background-color: rgba(129, 32, 32, 0.692);
+    }&.delete:hover{
+        background-color: rgba(180, 41, 41, 0.692);
+        color:#ffffff;
+    }
+
+    &.view{
+        background-color: #999bdf;
+        color:#ffffff;
+    }&.view:hover{
+        background-color: #797bb6;
+       
+    }
+}
+
+.btn-buttons-create{
+    width: 15%;
+    height: 43px;
+    float: right;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    background-color: #9294e7;
+    color: #ffffff;
+    font-weight: 600;
+}
